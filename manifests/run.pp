@@ -91,6 +91,7 @@ define docker::run(
     tty => $tty,
     socket_connect => any2array($socket_connect),
     hostentries => any2array($hostentries),
+    restart => $restart
   })
 
   $sanitised_title = regsubst($title, '[^0-9A-Za-z.\-]', '-', 'G')
